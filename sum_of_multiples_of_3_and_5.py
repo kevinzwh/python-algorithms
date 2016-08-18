@@ -10,8 +10,7 @@ def multiples_of_3_and_5(top_number):
 
 def sum_of_3_and_5_multiples(top_number):
     multiples = multiples_of_3_and_5(top_number)
-    print(multiples)
-    sum = 0
-    for number in multiples:
-        sum += number
-    return sum
+    sum(multiples)
+
+def refactored_sum_of_multiples(top_number):
+    return sum([n for n in range(top_number) if n % 3 == 0 or n % 5 == 0])
